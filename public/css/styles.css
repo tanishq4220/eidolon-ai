@@ -1,0 +1,120 @@
+/* Eidolon AI - Gothic Cyberpunk Design System */
+
+:root {
+  --color-ectoplasm: #00FF88;
+  --color-spectral: #A855F7;
+  --color-cempasuchil: #FF9900;
+  --color-blood: #FF3366;
+}
+
+/* CRT Scanlines Filter */
+.crt-scanlines {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.35) 50%
+  ), linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.03),
+    rgba(0, 255, 0, 0.01),
+    rgba(0, 0, 255, 0.03)
+  );
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
+.crt-scanlines.disabled {
+  display: none !important;
+}
+
+/* Glow Effects */
+.glow-ectoplasm {
+  text-shadow: 0 0 12px rgba(0, 255, 136, 0.6);
+}
+
+.glow-spectral {
+  text-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+}
+
+.glow-cempasuchil {
+  text-shadow: 0 0 12px rgba(255, 153, 0, 0.6);
+}
+
+/* Tab Navigation */
+.nav-tab {
+  color: #9CA3AF;
+  border: 1px solid transparent;
+}
+
+.nav-tab:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-tab.active {
+  color: #FFFFFF;
+  background: rgba(22, 25, 34, 0.9);
+  border-color: rgba(36, 41, 56, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Animated Candle Flame */
+.candle-flame {
+  width: 14px;
+  height: 24px;
+  background: radial-gradient(circle at bottom, #FFF 0%, #FFCC00 40%, #FF4500 80%, transparent 100%);
+  border-radius: 50% 50% 35% 35%;
+  animation: flicker 1.8s infinite alternate ease-in-out;
+  box-shadow: 0 0 18px rgba(255, 153, 0, 0.8), 0 0 35px rgba(255, 69, 0, 0.4);
+  transform-origin: bottom center;
+}
+
+@keyframes flicker {
+  0% { transform: scale(1) rotate(-1deg); opacity: 0.95; }
+  25% { transform: scale(1.08, 0.92) rotate(2deg); opacity: 1; }
+  50% { transform: scale(0.95, 1.05) rotate(-2deg); opacity: 0.88; }
+  75% { transform: scale(1.05, 0.97) rotate(1deg); opacity: 0.98; }
+  100% { transform: scale(1) rotate(-1deg); opacity: 0.92; }
+}
+
+/* Marigold Petal Falling Keyframes */
+@keyframes petalDrift {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+  20% { opacity: 0.8; }
+  80% { opacity: 0.8; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07080B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #242938;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00FF88;
+}
+
+/* Monospace Terminal Styling */
+#terminalStream code, #terminalStream span {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Typewriter animation support */
+.typing-cursor::after {
+  content: '▋';
+  color: #00FF88;
+  animation: blink 0.9s infinite step-start;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

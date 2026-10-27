@@ -1,0 +1,32 @@
+{
+  "name": "eidolon-ai",
+  "version": "1.0.0",
+  "description": "Ghost in the Machine: An Open-Source AI Binary Necromancy, Digital Séance & Fallen Code Ofrenda Suite Powered by Google Gemma 2 & REA",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "gemma2",
+    "open-weight-ai",
+    "ghost-in-the-machine",
+    "hacktoberfest",
+    "devchallenge",
+    "hf26challenge",
+    "reverse-engineering",
+    "rea",
+    "digital-seance",
+    "dia-de-los-muertos",
+    "binary-analysis",
+    "web-audio-api"
+  ],
+  "author": "Tanishq Wankhede <tanishq4220>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
